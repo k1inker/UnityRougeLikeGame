@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Object
+  - Wall
+  - Damageable
+  - Coin
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Obstacle
+  - WeaperonMelee
+  - WeaperonRange
+  - Potion
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 267282583
+    locked: 0
+  - name: Wall
+    uniqueID: 2957578153
+    locked: 0
+  - name: Weaperon
+    uniqueID: 3813248389
+    locked: 0
+  - name: Player
+    uniqueID: 3205427151
+    locked: 0
+  - name: Enemy
+    uniqueID: 2336456085
+    locked: 0
+  - name: WeaperonEquip
+    uniqueID: 3138615089
+    locked: 0
+  - name: SideWall
+    uniqueID: 76221091
+    locked: 0
+  - name: UI
+    uniqueID: 125534765
+    locked: 0

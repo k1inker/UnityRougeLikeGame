@@ -1,0 +1,4 @@
+repository "Rouglike-Game-Unity@RougeLikeGame@cloud"
+  path "/"
+    br "/main"
+    co "/main"
