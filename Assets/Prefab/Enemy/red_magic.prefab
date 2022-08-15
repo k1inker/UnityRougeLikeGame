@@ -19,9 +19,8 @@ GameObject:
   - component: {fileID: 2113451594561514815}
   - component: {fileID: 2113451594561514814}
   - component: {fileID: 2113451594561514812}
-  - component: {fileID: 2113451594561514813}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: red_magic
   m_TagString: Damageable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 1.5
+  radius: 2
   height: 1
   canMove: 1
   maxSpeed: 2
@@ -224,7 +223,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 2
   pickNextWaypointDist: 4
-  endReachedDistance: 1.5
+  endReachedDistance: 5
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 0
   whenCloseToDestination: 0
@@ -243,21 +242,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 2113451594739902642}
---- !u!114 &2113451594561514813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113451594561514791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e96734b01b7381499b377461bb837d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetEnemy: {fileID: 2113451594739902642}
-  _enemyAttack: {fileID: 2113451596081902327}
-  _chanceAttack: 4
 --- !u!1 &2113451594739902645
 GameObject:
   m_ObjectHideFlags: 0

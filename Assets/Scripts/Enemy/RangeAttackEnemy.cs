@@ -1,17 +1,10 @@
 using UnityEngine;
 
-public class AttackEnemy : MonoBehaviour
+public class RangeAttackEnemy : MonoBehaviour
 {
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private float _speedBullet = 3f;
     [SerializeField] private Transform _targetEnemy;
-    private void OnEnable()
-    {
-        GetComponentInParent<EnemyAnimation>().AttackEnemyAnimation();
-        float rotationZ = Mathf.Atan2(_targetEnemy.position.y, _targetEnemy.position.x) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.AngleAxis(rotationZ, Vector3.forward);
-        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, 1);
-    }
     public void Shoot()
     {
         GameObject bullet = Instantiate(_bulletPrefab, transform.position, transform.rotation);

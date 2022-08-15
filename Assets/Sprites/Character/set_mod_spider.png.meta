@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 94a861d701aaec043893abd7929f5a55
+guid: aa24f973fdd7d7f4280b89e0307a9ec9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,8 +45,8 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 7
+  spritePivot: {x: 0.5, y: 0}
   spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -71,7 +71,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MoveFrog_0
+      name: set_mod_spider_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 76
-        width: 16
-        height: 18
+        x: 3
+        y: 13
+        width: 20
+        height: 20
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0c8ca679eeb9794991bedc6a76d7712
-      internalID: -952404353
+      spriteID: 49306a7186164b24e9e935da908dd833
+      internalID: 1167329267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MoveFrog_1
+      name: set_mod_spider_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 77
-        width: 16
-        height: 18
+        x: 31
+        y: 13
+        width: 23
+        height: 15
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58e7d5505c6060b4ea204f223affcfce
-      internalID: 1104909297
+      spriteID: ad214219e08449241b337d6935d4443b
+      internalID: 1639722986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MoveFrog_2
+      name: set_mod_spider_2
       rect:
         serializedVersion: 2
-        x: 55
-        y: 76
-        width: 16
-        height: 16
+        x: 62
+        y: 12
+        width: 22
+        height: 13
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c668b94e8e239c40b2948fc14205f0d
-      internalID: -98120852
+      spriteID: 9d068370a12df0246bf9b271a7b72f24
+      internalID: 895461147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MoveFrog_3
+      name: set_mod_spider_3
       rect:
         serializedVersion: 2
-        x: 75
-        y: 76
-        width: 16
-        height: 16
+        x: 91
+        y: 12
+        width: 24
+        height: 12
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,92 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a334cb1360cb9f468b0d22098ca2767
-      internalID: -435213728
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MoveFrog_4
-      rect:
-        serializedVersion: 2
-        x: 94
-        y: 76
-        width: 16
-        height: 18
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d93b91451099f9408cd1da67ae7a623
-      internalID: 2136685397
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MoveFrog_5
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 77
-        width: 16
-        height: 18
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 605f401c7d9dec04baf324bd4acd2d05
-      internalID: 1628593330
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MoveFrog_6
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 76
-        width: 16
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a36b9a7b2a8b784b86116538115b6bb
-      internalID: -1227121638
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MoveFrog_7
-      rect:
-        serializedVersion: 2
-        x: 153
-        y: 76
-        width: 16
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b126346906c851c478377daded62d471
-      internalID: 221219322
+      spriteID: b1635ee4e5c99ad4faeda0d64e7a317e
+      internalID: -2008635426
       vertices: []
       indices: 
       edges: []
@@ -282,28 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MoveFrog_13: -1132668459
-      MoveFrog_20: 1037912891
-      MoveFrog_0: -952404353
-      MoveFrog_10: -1105390555
-      MoveFrog_4: 2136685397
-      MoveFrog_15: -344361229
-      MoveFrog_7: 221219322
-      MoveFrog_12: 1918103360
-      MoveFrog_18: 552868627
-      MoveFrog_1: 1104909297
-      MoveFrog_6: -1227121638
-      MoveFrog_8: -1783061273
-      MoveFrog_5: 1628593330
-      MoveFrog_21: -1341795679
-      MoveFrog_3: -435213728
-      MoveFrog_9: 536161087
-      MoveFrog_14: -1318362420
-      MoveFrog_17: 2125669361
-      MoveFrog_2: -98120852
-      MoveFrog_16: 311607579
-      MoveFrog_19: 625560949
-      MoveFrog_11: -1895356284
+      set_mod_spider_1: 1639722986
+      set_mod_spider_3: -2008635426
+      set_mod_spider_2: 895461147
+      set_mod_spider_0: 1167329267
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

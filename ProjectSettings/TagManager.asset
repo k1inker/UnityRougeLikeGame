@@ -12,14 +12,14 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Obstacle
   - WeaperonMelee
   - WeaperonRange
   - Potion
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -51,14 +51,14 @@ TagManager:
   - name: Wall
     uniqueID: 2957578153
     locked: 0
+  - name: Enemy
+    uniqueID: 2336456085
+    locked: 0
   - name: Weaperon
     uniqueID: 3813248389
     locked: 0
   - name: Player
     uniqueID: 3205427151
-    locked: 0
-  - name: Enemy
-    uniqueID: 2336456085
     locked: 0
   - name: WeaperonEquip
     uniqueID: 3138615089

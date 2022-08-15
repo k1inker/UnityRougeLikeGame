@@ -3,18 +3,18 @@ using UnityEngine.UI;
 
 public class HPbar : MonoBehaviour
 {
-    public Animator[] _anim;
-    public int healthPoint;
-
-    [SerializeField] private int _maxHealthPoint;
-    [SerializeField] private int _maxArmorPoint;
-
-    private int _prevPoint;
-
     enum type
     {
         health, armor
     }
+    public Animator[] _anim;
+
+    [SerializeField] private int _maxArmorPoint;
+
+    private StatsControl _healthPoint;
+    private int _prevPoint;
+    private int _maxHealthPoint;
+
 
     public Image[] img;
 
@@ -25,13 +25,14 @@ public class HPbar : MonoBehaviour
 
     void Start()
     {
-        healthPoint = _maxHealthPoint;
+        _healthPoint = GameObject.Find("Player").GetComponent<StatsControl>();
+        _maxHealthPoint = (int)_healthPoint.health;
         _prevPoint = _maxHealthPoint;
     }
 
     void Update()
     {
-        ChangeSprite(healthPoint, "health");
+        ChangeSprite((int)_healthPoint.health, "health");
     }
         
     private void ChangeSprite(int point, string type)
