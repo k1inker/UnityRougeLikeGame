@@ -13,12 +13,14 @@ GameObject:
   - component: {fileID: 2113451594561514810}
   - component: {fileID: 2113451594561514789}
   - component: {fileID: 2113451594561514785}
-  - component: {fileID: 2113451594561514811}
   - component: {fileID: 2113451594561514808}
   - component: {fileID: 2113451594561514784}
   - component: {fileID: 2113451594561514815}
   - component: {fileID: 2113451594561514814}
   - component: {fileID: 2113451594561514812}
+  - component: {fileID: 7453792180261752120}
+  - component: {fileID: 3859864347753653318}
+  - component: {fileID: 991622718}
   m_Layer: 0
   m_Name: red_magic
   m_TagString: Damageable
@@ -122,18 +124,6 @@ MonoBehaviour:
   rotateSpeed: 5
   health: 100
   coin: 0
---- !u!114 &2113451594561514811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113451594561514791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a126f94a34097934c96496b92ea5b8b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2113451594561514808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +232,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 2113451594739902642}
+--- !u!114 &7453792180261752120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113451594561514791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a126f94a34097934c96496b92ea5b8b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetEnemy: {fileID: 2113451594739902642}
+  playerObj: {fileID: 0}
+--- !u!114 &3859864347753653318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113451594561514791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e51814f6dd04d4ca9ecce0bc31720c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &991622718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113451594561514791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e51814f6dd04d4ca9ecce0bc31720c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2113451594739902645
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +372,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1958511211
-  m_SortingLayer: 5
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1222282015, guid: 71b5e81646c2da348bfc1fd34cedc346, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -367,7 +395,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2113451596081902324}
   - component: {fileID: 2113451596081902325}
-  - component: {fileID: 8594899082051110484}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Untagged
@@ -429,7 +456,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1958511211
-  m_SortingLayer: 5
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -470018510, guid: 71b5e81646c2da348bfc1fd34cedc346, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -442,21 +469,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8594899082051110484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113451596081902327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb971eaeba05d4548821c1f5a777a3c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bulletPrefab: {fileID: 8155058915742209901, guid: ec037dbd201e18140b7f17e94924fca3, type: 3}
-  _speedBullet: 3
-  _targetEnemy: {fileID: 2113451594739902642}
 --- !u!1 &2113451596270998967
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,9 +480,9 @@ GameObject:
   - component: {fileID: 2113451596270998964}
   - component: {fileID: 2113451596270998965}
   - component: {fileID: 2113451596270998962}
-  - component: {fileID: 2113451596270998963}
+  - component: {fileID: 1079662140}
   m_Layer: 0
-  m_Name: red_magic
+  m_Name: SpriteRedMagic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -525,7 +537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a437fd3c243c4348ab2a5cbd900db86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2113451596270998963
+--- !u!114 &1079662140
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -534,7 +546,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2113451596270998967}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be4b02790d4063f4ba2cba7960724e44, type: 3}
+  m_Script: {fileID: 11500000, guid: cb971eaeba05d4548821c1f5a777a3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameObjAttack: {fileID: 2113451596081902327}
+  _bulletPrefab: {fileID: 8155058915742209901, guid: ec037dbd201e18140b7f17e94924fca3, type: 3}
+  _speedBullet: 3
+  _targetEnemy: {fileID: 2113451594739902642}

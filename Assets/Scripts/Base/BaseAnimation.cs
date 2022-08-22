@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 [RequireComponent(typeof(Animator))]
 public class BaseAnimation : MonoBehaviour
 {

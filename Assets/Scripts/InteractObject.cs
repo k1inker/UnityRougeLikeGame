@@ -10,9 +10,12 @@ public class InteractObject : MonoBehaviour
     [SerializeField] private Animator _animText;
     [SerializeField] private TextMeshProUGUI _coinCounterText;
 
-    
+    [SerializeField] private TextMeshProUGUI[] _bigPotionCounterText;
+    [SerializeField] private TextMeshProUGUI[] _smallPotionCounterText;
+    [SerializeField] private GameObject _potionEquip;
 
-    
+
+
 
     [SerializeField] private GameObject _interactObjectImage;
     [SerializeField] private GameObject _coin_TextX;
@@ -35,6 +38,7 @@ public class InteractObject : MonoBehaviour
     void Start()
     {
         _statsControl = GetComponent<StatsControl>();
+        _potionEquip.SetActive(false);
         _interactObjectImage.SetActive(false);
         _newInteractObjectImage = _interactObjectImage;
         _coinCounterText.text = _statsControl.coin.ToString();
@@ -48,6 +52,28 @@ public class InteractObject : MonoBehaviour
             checkCountNumCoin();
             _coinCounterText.text = _statsControl.coin.ToString();
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            _potionEquip.SetActive(true);
+            Time.timeScale = 0.5f;
+            Time.fixedDeltaTime = Time.timeScale * 0.02f;
+        }
+        else if (Input.GetKeyUp(KeyCode.Q))
+        {
+            _potionEquip.SetActive(false);
+            Time.timeScale = 1;
+            Time.fixedDeltaTime = Time.timeScale * 0.02f;
+        }
+
+        if (_potionEquip.active) 
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                _bigPotionCounterText[i].text = _statsControl.bigPotion[i].ToString();
+                _smallPotionCounterText[i].text = _statsControl.smallPotion[i].ToString();
+            }
+        }
     }
 
     private void checkCountNumCoin()
@@ -55,27 +81,27 @@ public class InteractObject : MonoBehaviour
         double countNum = Math.Log10(_statsControl.coin);
         if (countNum >= 5)
         {
-            _coin_TextX.transform.localPosition = new Vector3(-10.5f, 0, 0);
+            _coin_TextX.transform.localPosition = new Vector3(-7.5f, 0, 0);
         }
         else if (countNum >= 4)
         {
-            _coin_TextX.transform.localPosition = new Vector3(-5.3f, 0, 0);
+            _coin_TextX.transform.localPosition = new Vector3(-3f, 0, 0);
         }
         else if (countNum >= 3)
         {
-            _coin_TextX.transform.localPosition = new Vector3(0.35f, 0, 0);
+            _coin_TextX.transform.localPosition = new Vector3(2.3f, 0, 0);
         }
         else if (countNum >= 2)
         {
-            _coin_TextX.transform.localPosition = new Vector3(5.7f, 0, 0);
+            _coin_TextX.transform.localPosition = new Vector3(6.8f, 0, 0);
         }
         else if (countNum >= 1)
         {
-            _coin_TextX.transform.localPosition = new Vector3(11.25f, 0, 0);
+            _coin_TextX.transform.localPosition = new Vector3(11.3f, 0, 0);
         }
         else if (countNum >= 0)
         {
-            _coin_TextX.transform.localPosition = new Vector3(16.5f, 0, 0);
+            _coin_TextX.transform.localPosition = new Vector3(16f, 0, 0);
         }
     }
 
@@ -133,12 +159,55 @@ public class InteractObject : MonoBehaviour
                 break;
             case "Potion":
                 {
-
+                    HandPotion();
                 } break;
         }
     }
 
-    public void HandMeleeWeaperon()
+    public void HandPotion()
+    {
+        string[] s = _objectCollision.GetComponent<Text>().text.Split('.');
+        bool sizeSelect = false;
+        int[] curPotion = _statsControl.bigPotion;
+
+        switch (s[0])
+        {
+            case "Big":
+                {
+                    curPotion = _statsControl.bigPotion;
+                    sizeSelect = true;
+                }
+                break;
+            case "Small":
+                {
+                    curPotion = _statsControl.smallPotion;
+                    sizeSelect = true;
+                }
+                break;
+        }
+
+        if (sizeSelect)
+        {
+            switch (s[1])
+            {
+                case "Health":
+                    {
+                        curPotion[0] += 1;
+                    }
+                    break;
+                case "UpDmg":
+                    {
+                        curPotion[1] += 1;
+                    }
+                    break;
+            }
+            Destroy(_objectCollision.gameObject);
+        }
+        
+
+    }
+
+        public void HandMeleeWeaperon()
     {
         _findObject = false;
         _objectCollision.GetComponentInChildren<Renderer>().sortingLayerID = SortingLayer.NameToID("WeaperonEquip");

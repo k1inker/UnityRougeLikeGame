@@ -17,7 +17,7 @@ public class BulletController : MonoBehaviour
         {
             collision.gameObject.GetComponent<HealthControl>().TakeDamageAndCheckDeath(damage);
         }
-        if (collision.gameObject.tag != "Object")
+        if (collision.gameObject.tag != "Object" && collision.gameObject.tag != "Coin")
         {
             //_destroyBullet.SetTrigger("destroyBullet");
             Destroy(this.gameObject);

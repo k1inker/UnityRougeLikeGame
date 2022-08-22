@@ -17,9 +17,9 @@ GameObject:
   - component: {fileID: 1114877574179956599}
   - component: {fileID: 4405618022424784312}
   - component: {fileID: 1385095475134522865}
-  - component: {fileID: 5024253311690371237}
   - component: {fileID: 2118080217375447383}
   - component: {fileID: 1471377030}
+  - component: {fileID: 6153928717079319631}
   m_Layer: 10
   m_Name: red_crab
   m_TagString: Damageable
@@ -217,19 +217,6 @@ MonoBehaviour:
   slowWhenNotFacingTarget: 0
   whenCloseToDestination: 0
   constrainInsideGraph: 0
---- !u!114 &5024253311690371237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057363522193351163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e96734b01b7381499b377461bb837d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetEnemy: {fileID: 7908124718944116560}
 --- !u!114 &2118080217375447383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,10 +229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a126f94a34097934c96496b92ea5b8b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radiusAttack: 1
-  _layerPlayer:
-    serializedVersion: 2
-    m_Bits: 8
+  targetEnemy: {fileID: 7908124718944116560}
+  playerObj: {fileID: 0}
 --- !u!114 &1471377030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,6 +245,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 7908124718944116560}
+--- !u!114 &6153928717079319631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057363522193351163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e96734b01b7381499b377461bb837d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2591863820255720036
 GameObject:
   m_ObjectHideFlags: 0
